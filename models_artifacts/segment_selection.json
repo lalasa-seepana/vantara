@@ -1,0 +1,6 @@
+{
+  "k": 3,
+  "elbow_k": 4,
+  "rule": "Best silhouette near the geometric inertia elbow, excluding tiny clusters when possible",
+  "metrics_partition": "training customers only"
+}
