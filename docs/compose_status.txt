@@ -1,0 +1,4 @@
+NAME                          IMAGE                       COMMAND                  SERVICE     CREATED          STATUS                    PORTS
+vantara-project-api-1         vantara-project-api         "uvicorn api.main:ap…"   api         21 minutes ago   Up 21 minutes (healthy)   127.0.0.1:8000->8000/tcp
+vantara-project-dashboard-1   vantara-project-dashboard   "streamlit run front…"   dashboard   21 minutes ago   Up 20 minutes             127.0.0.1:8501->8501/tcp
+vantara-project-db-1          postgres:18.1-bookworm      "docker-entrypoint.s…"   db          22 minutes ago   Up 21 minutes (healthy)   5432/tcp
