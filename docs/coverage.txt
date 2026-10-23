@@ -1,0 +1,23 @@
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+src/__init__.py                      0      0   100%
+src/data/__init__.py                 0      0   100%
+src/data/pipeline.py               119     60    50%
+src/data/store.py                   71     25    65%
+src/explainability/__init__.py       0      0   100%
+src/explainability/explain.py      112     61    46%
+src/features/__init__.py             0      0   100%
+src/features/build.py              124     24    81%
+src/models/__init__.py               0      0   100%
+src/models/deep.py                 107      3    97%
+src/models/predict.py               78     21    73%
+src/models/preprocessing.py         23      0   100%
+src/models/train.py                195      4    98%
+src/segmentation/__init__.py         0      0   100%
+src/segmentation/cluster.py         67     54    19%
+src/utils/__init__.py                0      0   100%
+src/utils/common.py                 32      0   100%
+src/utils/reporting.py             301     12    96%
+src/utils/setup.py                  19     19     0%
+----------------------------------------------------
+TOTAL                             1248    283    77%
