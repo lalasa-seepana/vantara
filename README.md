@@ -1,4 +1,4 @@
-# Vantara customer behavior prediction
+# Vantara Customer Intelligence Platform
 
 This project implements the supplied Vantara PRD using the complete **Online Retail II** dataset. It includes a reproducible data pipeline, six classical churn classifiers, an ANN, an LSTM, an autoencoder, CLV regression, two clustering methods, SHAP/LIME explanations, a FastAPI service, and a Streamlit dashboard backed by PostgreSQL.
 
