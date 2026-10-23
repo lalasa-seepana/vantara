@@ -1,0 +1,27 @@
+{
+  "raw_rows": 1067371,
+  "missing_customer_rows": 243007,
+  "exact_duplicates_removed": 34335,
+  "quantity_iqr_bounds": [
+    -12.5,
+    23.5
+  ],
+  "price_iqr_bounds": [
+    -3.1899999999999995,
+    8.649999999999999
+  ],
+  "clean_rows": 1033036,
+  "identified_customers": 5942,
+  "return_rows": 22497,
+  "invalid_price_rows": 6019,
+  "admin_rows": 5980,
+  "bulk_rows_retained": 13350,
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+  "sheet_names": [
+    "Year 2009-2010",
+    "Year 2010-2011"
+  ],
+  "min_date": "2009-12-01 07:45:00",
+  "max_date": "2011-12-09 12:50:00"
+}
