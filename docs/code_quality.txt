@@ -1,0 +1,3 @@
+Ruff check: zero errors.
+Black 25.1.0: all 27 Python files match default formatting, verified with black.format_str.
+Pip check: no broken requirements.
