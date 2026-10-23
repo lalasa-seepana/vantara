@@ -1,0 +1,13 @@
+{
+  "cutoff_exclusive": "2011-09-01 00:00:00",
+  "horizon_days": 90,
+  "customers": 5224,
+  "split_counts": {
+    "train": 3656,
+    "validation": 784,
+    "test": 784
+  },
+  "churn_rate": 0.5719754977029097,
+  "category_definition": "Ordered description keyword proxies; no official categories exist",
+  "discount_definition": "Share of lines below the same customer's earlier maximum SKU price; not a causal promotion response"
+}
