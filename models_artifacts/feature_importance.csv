@@ -1,0 +1,57 @@
+feature,mean_absolute_shap
+recency,0.13774579636372966
+monetary,0.04087229513259377
+seasonal_concentration,0.027684499186413854
+gap_variance,0.027607932774851403
+frequency,0.02431338836631477
+affinity_kitchen,0.02150129291143692
+affinity_stationery,0.02084955548864337
+tenure,0.019654915365117816
+average_spend,0.016235580153925535
+affinity_home,0.01192912946530451
+affinity_bags,0.011306258595085574
+basket_size,0.009327839482780414
+top_sku_frequency,0.008179426895549595
+frequency_trend,0.006970329530866347
+affinity_toys,0.0062638055530553835
+return_rate,0.006139665761387728
+affinity_seasonal,0.005831392606281792
+discount_sensitivity_proxy,0.0024371003342961157
+country_Germany,0.0013274672082535207
+country_United Kingdom,0.0009806555366630894
+country_France,0.0006190279943532218
+country_Spain,0.000322023982358872
+country_Austria,0.0
+country_Australia,0.0
+country_Channel Islands,0.0
+country_Canada,0.0
+country_Brazil,0.0
+country_Belgium,0.0
+country_Bahrain,0.0
+country_EIRE,0.0
+country_Cyprus,0.0
+country_Czech Republic,0.0
+country_Greece,0.0
+country_Iceland,0.0
+country_Israel,0.0
+country_Italy,0.0
+country_Japan,0.0
+country_Denmark,0.0
+country_Finland,0.0
+country_European Community,0.0
+country_Lithuania,0.0
+country_Lebanon,0.0
+country_Korea,0.0
+country_Malta,0.0
+country_Norway,0.0
+country_Poland,0.0
+country_Nigeria,0.0
+country_Netherlands,0.0
+country_Sweden,0.0
+country_Portugal,0.0
+country_Switzerland,0.0
+country_Thailand,0.0
+country_United Arab Emirates,0.0
+country_USA,0.0
+country_Unspecified,0.0
+country_West Indies,0.0
