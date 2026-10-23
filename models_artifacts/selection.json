@@ -1,0 +1,370 @@
+{
+  "model": "lightgbm",
+  "threshold": 0.25,
+  "thresholds": {
+    "logistic": 0.35,
+    "decision_tree": 0.2,
+    "random_forest": 0.45,
+    "xgboost": 0.35,
+    "lightgbm": 0.25,
+    "knn": 0.35,
+    "ann": 0.3
+  },
+  "validation": {
+    "logistic": {
+      "accuracy": 0.7002551020408163,
+      "precision": 0.6924460431654677,
+      "recall": 0.8574610244988864,
+      "f1": 0.7661691542288557,
+      "roc_auc": 0.768666688827577,
+      "confusion_matrix": [
+        [
+          164,
+          171
+        ],
+        [
+          64,
+          385
+        ]
+      ]
+    },
+    "decision_tree": {
+      "accuracy": 0.6721938775510204,
+      "precision": 0.647239263803681,
+      "recall": 0.9398663697104677,
+      "f1": 0.7665758401453224,
+      "roc_auc": 0.7615264435062992,
+      "confusion_matrix": [
+        [
+          105,
+          230
+        ],
+        [
+          27,
+          422
+        ]
+      ]
+    },
+    "random_forest": {
+      "accuracy": 0.7244897959183674,
+      "precision": 0.7334669338677354,
+      "recall": 0.8151447661469933,
+      "f1": 0.7721518987341772,
+      "roc_auc": 0.7769238440315129,
+      "confusion_matrix": [
+        [
+          202,
+          133
+        ],
+        [
+          83,
+          366
+        ]
+      ]
+    },
+    "xgboost": {
+      "accuracy": 0.7181122448979592,
+      "precision": 0.7035714285714286,
+      "recall": 0.8775055679287305,
+      "f1": 0.7809712586719524,
+      "roc_auc": 0.7865372469501047,
+      "confusion_matrix": [
+        [
+          169,
+          166
+        ],
+        [
+          55,
+          394
+        ]
+      ]
+    },
+    "lightgbm": {
+      "accuracy": 0.6887755102040817,
+      "precision": 0.664,
+      "recall": 0.9242761692650334,
+      "f1": 0.7728119180633147,
+      "roc_auc": 0.7868630123325466,
+      "confusion_matrix": [
+        [
+          125,
+          210
+        ],
+        [
+          34,
+          415
+        ]
+      ]
+    },
+    "knn": {
+      "accuracy": 0.6862244897959183,
+      "precision": 0.6683250414593698,
+      "recall": 0.8975501113585747,
+      "f1": 0.7661596958174905,
+      "roc_auc": 0.7638566632317256,
+      "confusion_matrix": [
+        [
+          135,
+          200
+        ],
+        [
+          46,
+          403
+        ]
+      ]
+    },
+    "ann": {
+      "accuracy": 0.7002551020408163,
+      "precision": 0.6851211072664359,
+      "recall": 0.8819599109131403,
+      "f1": 0.7711781888997079,
+      "roc_auc": 0.7812917594654788,
+      "confusion_matrix": [
+        [
+          153,
+          182
+        ],
+        [
+          53,
+          396
+        ]
+      ]
+    }
+  },
+  "feature_columns": [
+    "monetary",
+    "recency",
+    "tenure",
+    "frequency",
+    "average_spend",
+    "basket_size",
+    "gap_variance",
+    "frequency_trend",
+    "seasonal_concentration",
+    "return_rate",
+    "discount_sensitivity_proxy",
+    "country",
+    "top_sku",
+    "affinity_seasonal",
+    "affinity_kitchen",
+    "affinity_home",
+    "affinity_bags",
+    "affinity_stationery",
+    "affinity_toys"
+  ],
+  "seed": 42,
+  "category_names": [
+    "seasonal",
+    "kitchen",
+    "home",
+    "bags",
+    "stationery",
+    "toys",
+    "other"
+  ],
+  "selection_rule": "Highest validation ROC-AUC, then recall; threshold chosen on validation only",
+  "config": {
+    "seed": 42,
+    "paths": {
+      "raw": "/home/lalasa/vantara-project/data/raw/online_retail_II.xlsx",
+      "interim": "/home/lalasa/vantara-project/data/interim",
+      "processed": "/home/lalasa/vantara-project/data/processed",
+      "artifacts": "/home/lalasa/vantara-project/models_artifacts",
+      "docs": "/home/lalasa/vantara-project/docs"
+    },
+    "source": {
+      "url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+      "sheets": [
+        "Year 2009-2010",
+        "Year 2010-2011"
+      ],
+      "expected_rows": 1067371,
+      "first_date": "2009-12-01",
+      "end_date_exclusive": "2011-12-10",
+      "max_missing_customer_fraction": 0.3,
+      "max_missing_description_fraction": 0.02
+    },
+    "features": {
+      "cutoff": "2011-09-01",
+      "horizon_days": 90,
+      "trend_months": 6,
+      "iqr_multiplier": 1.5,
+      "bulk_quantity": 100,
+      "admin_codes": [
+        "POST",
+        "DOT",
+        "M",
+        "D",
+        "C2",
+        "BANK CHARGES",
+        "AMAZONFEE",
+        "B",
+        "CRUK",
+        "S",
+        "PADS",
+        "ADJUST",
+        "ADJUST2",
+        "TEST001",
+        "TEST002"
+      ],
+      "category_patterns": {
+        "seasonal": "CHRISTMAS|XMAS|EASTER|HALLOWEEN|VALENTINE",
+        "kitchen": "MUG|CUP|PLATE|BOWL|TEAPOT|TEA |COFFEE|KITCHEN|CUTLERY|SPOON|FORK|NAPKIN|CAKE",
+        "home": "CANDLE|HOLDER|LANTERN|CUSHION|DOOR|FRAME|MIRROR|CLOCK|MAT|VASE|LIGHT",
+        "bags": "BAG|PURSE|WALLET|SHOPPER",
+        "stationery": "CARD|PENCIL|PEN |NOTEBOOK|PAPER|STICKER|WRAP|STATIONERY",
+        "toys": "TOY|DOLL|GAME|PUZZLE|TEDDY|BALLOON"
+      },
+      "fallback_category": "other",
+      "engagement_scales": {
+        "recency": 90,
+        "frequency": 10,
+        "monetary": 2000
+      },
+      "value_tier_quantiles": [
+        0.33,
+        0.67
+      ],
+      "sequence_length": 12,
+      "recommendation_count": 3
+    },
+    "split": {
+      "test_size": 0.15,
+      "validation_size": 0.15,
+      "folds": 5
+    },
+    "models": {
+      "logistic": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "class_weight": "balanced"
+      },
+      "decision_tree": {
+        "max_depth": 5,
+        "min_samples_leaf": 15,
+        "class_weight": "balanced"
+      },
+      "random_forest": {
+        "n_estimators": 150,
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced_subsample",
+        "n_jobs": 2
+      },
+      "xgboost": {
+        "n_estimators": 350,
+        "max_depth": 3,
+        "learning_rate": 0.04,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "n_jobs": 2,
+        "tree_method": "hist",
+        "eval_metric": "logloss",
+        "early_stopping_rounds": 25
+      },
+      "lightgbm": {
+        "n_estimators": 160,
+        "max_depth": 5,
+        "num_leaves": 15,
+        "learning_rate": 0.04,
+        "class_weight": "balanced",
+        "n_jobs": 2,
+        "verbosity": -1
+      },
+      "knn": {
+        "n_neighbors": 25,
+        "weights": "distance",
+        "n_jobs": 2
+      },
+      "clv": {
+        "n_estimators": 200,
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "n_jobs": 2
+      },
+      "searches": {
+        "random_forest": [
+          {
+            "n_estimators": 120,
+            "max_depth": 6,
+            "min_samples_leaf": 8
+          },
+          {
+            "n_estimators": 180,
+            "max_depth": 10,
+            "min_samples_leaf": 4
+          }
+        ],
+        "xgboost": [
+          {
+            "learning_rate": 0.04,
+            "max_depth": 3,
+            "subsample": 0.85,
+            "colsample_bytree": 0.85
+          },
+          {
+            "learning_rate": 0.06,
+            "max_depth": 4,
+            "subsample": 0.75,
+            "colsample_bytree": 0.75
+          }
+        ]
+      },
+      "threshold_grid": [
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7
+      ],
+      "recall_target": 0.7,
+      "inner_validation_fraction": 0.15,
+      "dl": {
+        "epochs": 100,
+        "patience": 12,
+        "batch_size": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "l1": 1e-06,
+        "hidden": 32,
+        "latent": 6,
+        "dropout": 0.2,
+        "threads": 2,
+        "anomaly_quantile": 0.99
+      }
+    },
+    "segmentation": {
+      "k_values": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "n_init": 10,
+      "sample_size": 2000,
+      "min_cluster_fraction": 0.02
+    },
+    "explain": {
+      "background_rows": 100,
+      "summary_rows": 300,
+      "lime_samples": 1500,
+      "max_features": 10
+    },
+    "forecast": {
+      "months": 3,
+      "recent_months": 6
+    },
+    "api": {
+      "max_upload_bytes": 2097152,
+      "max_batch_rows": 500,
+      "timeout_seconds": 30
+    }
+  }
+}
