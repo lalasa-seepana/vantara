@@ -1,0 +1,314 @@
+{
+  "low_risk": {
+    "customer_id": "13777",
+    "model": "lightgbm",
+    "probability": 0.019001950729079967,
+    "base_probability": 0.5032842730507806,
+    "shap_sum": 0.019001946459416663,
+    "contributions": [
+      {
+        "feature": "recency",
+        "value": 29.459027777777777,
+        "contribution": -0.20081711319816972
+      },
+      {
+        "feature": "monetary",
+        "value": 36021.340000000004,
+        "contribution": -0.06629379046061731
+      },
+      {
+        "feature": "frequency",
+        "value": 52.0,
+        "contribution": -0.06139315302447912
+      },
+      {
+        "feature": "frequency_trend",
+        "value": -0.22857142857142856,
+        "contribution": -0.04294501576609381
+      },
+      {
+        "feature": "affinity_stationery",
+        "value": 0.0033979857495584557,
+        "contribution": -0.02977878222642882
+      },
+      {
+        "feature": "seasonal_concentration",
+        "value": 0.391068738697672,
+        "contribution": -0.023621206110888093
+      },
+      {
+        "feature": "return_rate",
+        "value": 0.008675855279350234,
+        "contribution": -0.017622187148942783
+      },
+      {
+        "feature": "gap_variance",
+        "value": 105.87072323611113,
+        "contribution": -0.017327761334220607
+      },
+      {
+        "feature": "discount_sensitivity_proxy",
+        "value": 0.09712230215827339,
+        "contribution": -0.014194069860616007
+      },
+      {
+        "feature": "affinity_kitchen",
+        "value": 0.030915840443470455,
+        "contribution": -0.008073041465665674
+      }
+    ],
+    "lime": [
+      {
+        "condition": "recency <= 49.56",
+        "weight": -0.28751280026056947
+      },
+      {
+        "condition": "country_USA <= 0.00",
+        "weight": -0.13319650667427374
+      },
+      {
+        "condition": "country_Channel Islands <= 0.00",
+        "weight": 0.1263249815510108
+      },
+      {
+        "condition": "country_Israel <= 0.00",
+        "weight": -0.11278458157835346
+      },
+      {
+        "condition": "country_Netherlands <= 0.00",
+        "weight": -0.09610941334171223
+      },
+      {
+        "condition": "country_Cyprus <= 0.00",
+        "weight": -0.07968540011796721
+      },
+      {
+        "condition": "country_Denmark <= 0.00",
+        "weight": 0.07442598482523416
+      },
+      {
+        "condition": "country_Bahrain <= 0.00",
+        "weight": -0.06955972375495817
+      },
+      {
+        "condition": "country_Sweden <= 0.00",
+        "weight": -0.06014905783791555
+      },
+      {
+        "condition": "country_Thailand <= 0.00",
+        "weight": -0.05546474739439152
+      }
+    ],
+    "lime_local_r2": 0.3252753238379683,
+    "summary": "This customer is not flagged for no purchase within 90 days (estimated probability 1.9%). The strongest displayed factors reduce the estimate from its baseline.",
+    "units": "SHAP contributions are changes in model probability; LIME is an approximate local fit. Neither establishes causality."
+  },
+  "high_risk": {
+    "customer_id": "13739",
+    "model": "lightgbm",
+    "probability": 0.9824928822348047,
+    "base_probability": 0.5032842730507806,
+    "shap_sum": 0.9824928831395716,
+    "contributions": [
+      {
+        "feature": "recency",
+        "value": 427.56597222222223,
+        "contribution": 0.18479810035950991
+      },
+      {
+        "feature": "affinity_home",
+        "value": 1.0,
+        "contribution": 0.08037386048458364
+      },
+      {
+        "feature": "monetary",
+        "value": 75.3,
+        "contribution": 0.05508498449574101
+      },
+      {
+        "feature": "average_spend",
+        "value": 75.3,
+        "contribution": 0.047072355667883585
+      },
+      {
+        "feature": "frequency",
+        "value": 1.0,
+        "contribution": 0.026109609510972086
+      },
+      {
+        "feature": "gap_variance",
+        "value": 0.0,
+        "contribution": 0.020072453535430874
+      },
+      {
+        "feature": "seasonal_concentration",
+        "value": 1.0,
+        "contribution": 0.01961557719992997
+      },
+      {
+        "feature": "affinity_stationery",
+        "value": 0.0,
+        "contribution": 0.010633346997497411
+      },
+      {
+        "feature": "tenure",
+        "value": 427.56597222222223,
+        "contribution": 0.00910429810463473
+      },
+      {
+        "feature": "top_sku_frequency",
+        "value": 0.00437636761487965,
+        "contribution": 0.008765556325213177
+      }
+    ],
+    "lime": [
+      {
+        "condition": "recency > 316.45",
+        "weight": 0.3011957517579914
+      },
+      {
+        "condition": "country_Portugal <= 0.00",
+        "weight": 0.17717446049437807
+      },
+      {
+        "condition": "country_Germany <= 0.00",
+        "weight": 0.13684128981313132
+      },
+      {
+        "condition": "country_Malta <= 0.00",
+        "weight": 0.12872665902838995
+      },
+      {
+        "condition": "country_Thailand <= 0.00",
+        "weight": -0.12366168488815249
+      },
+      {
+        "condition": "country_Israel <= 0.00",
+        "weight": -0.11212041271641678
+      },
+      {
+        "condition": "country_EIRE <= 0.00",
+        "weight": -0.07685268992065566
+      },
+      {
+        "condition": "country_West Indies <= 0.00",
+        "weight": -0.021581939042425717
+      },
+      {
+        "condition": "country_Lebanon <= 0.00",
+        "weight": 0.019625297812451523
+      },
+      {
+        "condition": "country_Bahrain <= 0.00",
+        "weight": 0.0006841008420545699
+      }
+    ],
+    "lime_local_r2": 0.37787059825593183,
+    "summary": "This customer is flagged for no purchase within 90 days (estimated probability 98.2%). The main factors raising the estimate are recency, affinity home, monetary.",
+    "units": "SHAP contributions are changes in model probability; LIME is an approximate local fit. Neither establishes causality."
+  },
+  "borderline": {
+    "customer_id": "13636",
+    "model": "lightgbm",
+    "probability": 0.2490578267770588,
+    "base_probability": 0.5032842730507806,
+    "shap_sum": 0.24905782597450227,
+    "contributions": [
+      {
+        "feature": "recency",
+        "value": 22.377777777777776,
+        "contribution": -0.16444269329576283
+      },
+      {
+        "feature": "seasonal_concentration",
+        "value": 0.38604902946407854,
+        "contribution": -0.04519358656759533
+      },
+      {
+        "feature": "tenure",
+        "value": 185.39652777777778,
+        "contribution": -0.04215042511295576
+      },
+      {
+        "feature": "affinity_stationery",
+        "value": 0.0,
+        "contribution": 0.03025973195443596
+      },
+      {
+        "feature": "average_spend",
+        "value": 161.6375,
+        "contribution": -0.030141082496945595
+      },
+      {
+        "feature": "monetary",
+        "value": 646.55,
+        "contribution": 0.021494581271214883
+      },
+      {
+        "feature": "affinity_kitchen",
+        "value": 0.02296806124816333,
+        "contribution": -0.017793507317242892
+      },
+      {
+        "feature": "frequency",
+        "value": 4.0,
+        "contribution": 0.015564171985667006
+      },
+      {
+        "feature": "basket_size",
+        "value": 84.75,
+        "contribution": 0.013724549496812765
+      },
+      {
+        "feature": "affinity_bags",
+        "value": 0.09666692444513186,
+        "contribution": -0.013635967734461414
+      }
+    ],
+    "lime": [
+      {
+        "condition": "recency <= 49.56",
+        "weight": -0.28430863236812187
+      },
+      {
+        "condition": "country_USA <= 0.00",
+        "weight": -0.13045460550358112
+      },
+      {
+        "condition": "country_Channel Islands <= 0.00",
+        "weight": 0.12776359712463528
+      },
+      {
+        "condition": "country_Israel <= 0.00",
+        "weight": -0.10954826973146195
+      },
+      {
+        "condition": "country_Germany <= 0.00",
+        "weight": 0.10382279281440884
+      },
+      {
+        "condition": "country_Netherlands <= 0.00",
+        "weight": -0.0917644366526234
+      },
+      {
+        "condition": "country_Cyprus <= 0.00",
+        "weight": -0.0758152278152175
+      },
+      {
+        "condition": "country_Denmark <= 0.00",
+        "weight": 0.07493713549041939
+      },
+      {
+        "condition": "country_Bahrain <= 0.00",
+        "weight": -0.07024301037354216
+      },
+      {
+        "condition": "country_Finland <= 0.00",
+        "weight": -0.06705394209640306
+      }
+    ],
+    "lime_local_r2": 0.32818125492785377,
+    "summary": "This customer is not flagged for no purchase within 90 days (estimated probability 24.9%). The main factors raising the estimate are affinity stationery, monetary, frequency.",
+    "units": "SHAP contributions are changes in model probability; LIME is an approximate local fit. Neither establishes causality."
+  }
+}
