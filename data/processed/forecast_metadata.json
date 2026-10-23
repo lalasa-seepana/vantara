@@ -1,0 +1,10 @@
+{
+  "method": "Least-squares line over the last complete historical months; negative revenue forecasts clipped to zero",
+  "fit_months": 6,
+  "horizon_months": 3,
+  "coefficients": [
+    19637.29857142857,
+    616583.735238095
+  ],
+  "limitation": "Illustrative extrapolation, not validated demand or causal revenue uplift"
+}
